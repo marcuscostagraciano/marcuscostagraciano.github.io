@@ -5,10 +5,14 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <Header />
-
-  <Footer />
+  <v-app theme="dark">
+    <Header />
+    <Footer />
+  </v-app>
 </template>
 
 <style scoped>
+html {
+  height: 100vh;
+}
 </style>
