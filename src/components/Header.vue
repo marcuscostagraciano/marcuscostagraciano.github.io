@@ -1,4 +1,5 @@
 <script setup>
+const props = defineProps(['theme'])
 
 </script>
 
@@ -8,6 +9,7 @@
       Marcus Vinicius' Portfolio
     </v-app-bar-title>
 
+    <v-btn @click="$emit('change-Theme')" :icon="theme ? 'mdi-lightbulb-on' : 'mdi-lightbulb-off'"></v-btn>
     <v-btn><router-link to="/">Home</router-link></v-btn>
     <v-btn><router-link to="/about-me">About Me</router-link></v-btn>
     <v-btn><router-link to="/contact-me">Contact Me</router-link></v-btn>
