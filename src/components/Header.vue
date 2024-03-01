@@ -4,10 +4,10 @@
 
 <template>
   <v-app-bar density="comfortable" scroll-behavior="hide" scroll-threshold="1">
-    <v-app-bar-title>
+    <v-app-bar-title class="text-center">
       Marcus Vinicius' Portfolio
     </v-app-bar-title>
-    <v-spacer></v-spacer>
+
     <v-btn><router-link to="/">Home</router-link></v-btn>
     <v-btn><router-link to="/about-me">About Me</router-link></v-btn>
     <v-btn><router-link to="/contact-me">Contact Me</router-link></v-btn>
