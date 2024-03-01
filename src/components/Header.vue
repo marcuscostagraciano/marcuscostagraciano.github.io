@@ -4,7 +4,7 @@
 
 <template>
   <v-app-bar density="comfortable" scroll-behavior="hide" scroll-threshold="1">
-    <v-app-bar-title class="text-center">
+    <v-app-bar-title class="text-center d-none d-sm-inline">
       Marcus Vinicius' Portfolio
     </v-app-bar-title>
 

@@ -7,11 +7,10 @@ const contact_links = [
 </script>
 
 <template>
-    <!-- <v-footer app> -->
     <v-footer app class="d-flex justify-space-around">
         <p v-for="link in contact_links">
             <a :href="link.url" target="_blank">
-                <v-icon size="large" aria-hidden="false" :icon=link.icon />
+                <v-icon class="text-h2 text-sm-h3 text-md-h4" aria-hidden="false" :icon=link.icon />
             </a>
         </p>
     </v-footer>
