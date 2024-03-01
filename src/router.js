@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import home from './pages/home.vue'
 import about_me from './pages/about-me.vue'
 import contact_me from './pages/contact-me.vue'
