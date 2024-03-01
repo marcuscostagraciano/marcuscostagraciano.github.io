@@ -1,16 +1,17 @@
 <script setup>
 const contact_links = [
-    { url: "https://github.com/marcuscostagraciano", logo: "src/assets/img/github-mark-white.png", name: "GitHub profile link" },
-    { url: "https://www.linkedin.com/in/marcus-costa-graciano/", logo: "src/assets/img/LI-In-Bug.png", name: "LinkedIn profile link" },
+    { url: "https://github.com/marcuscostagraciano", icon: "mdi-github", name: "GitHub profile link" },
+    { url: "https://www.linkedin.com/in/marcus-costa-graciano/", icon: "mdi-linkedin", name: "LinkedIn profile link" },
 ]
 
 </script>
 
 <template>
-    <v-footer>
+    <!-- <v-footer app> -->
+    <v-footer app class="d-flex justify-space-around">
         <p v-for="link in contact_links">
-            <a v-bind:href="link.url" target="_blank">
-                <img v-bind:src="link.logo" v-bind:alt="link.name">
+            <a :href="link.url" target="_blank">
+                <v-icon size="large" aria-hidden="false" :icon=link.icon />
             </a>
         </p>
     </v-footer>
@@ -18,7 +19,7 @@ const contact_links = [
 
 <style scoped>
 footer {
-    display: flex;
+    /* display: ; */
     width: 100%;
     align-content: space-between;
 }
