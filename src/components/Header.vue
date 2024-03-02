@@ -19,6 +19,6 @@ const props = defineProps(['theme'])
 
 <style scoped>
 a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 </style>
