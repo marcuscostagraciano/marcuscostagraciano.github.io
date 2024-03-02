@@ -9,7 +9,8 @@ const props = defineProps(['theme'])
       Marcus Vinicius' Portfolio
     </v-app-bar-title>
 
-    <v-btn @click="$emit('change-Theme')" :icon="theme ? 'mdi-lightbulb-on' : 'mdi-lightbulb-off'"></v-btn>
+    <v-btn @click="$emit('change-Theme')" :icon="theme ? 'mdi-white-balance-sunny' : 'mdi-weather-night'"
+      :color="theme ? 'yellow' : 'black'"></v-btn>
     <v-btn><router-link to="/">Home</router-link></v-btn>
     <v-btn><router-link to="/about-me">About Me</router-link></v-btn>
     <v-btn><router-link to="/contact-me">Contact Me</router-link></v-btn>
@@ -17,23 +18,6 @@ const props = defineProps(['theme'])
 </template>
 
 <style scoped>
-.navbar {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-  background: blue;
-}
-
-.navbar ul {
-  display: flex;
-}
-
-.navbar ul li {
-  text-decoration: none;
-  list-style: none;
-  margin: -1em 2rem;
-}
-
 a {
   text-decoration: none !important;
 }
