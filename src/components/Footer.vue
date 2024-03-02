@@ -1,6 +1,7 @@
 <script setup>
 const contact_links = [
     { url: "https://github.com/marcuscostagraciano", icon: "mdi-github", name: "GitHub profile link" },
+    { url: "https://www.instagram.com/marcus.costa.graciano/", icon: "mdi-instagram", name: "Instagram profile link" },
     { url: "https://www.linkedin.com/in/marcus-costa-graciano/", icon: "mdi-linkedin", name: "LinkedIn profile link" },
 ]
 
@@ -10,24 +11,10 @@ const contact_links = [
     <v-footer app class="d-flex justify-space-around">
         <p v-for="link in contact_links">
             <a :href="link.url" target="_blank">
-                <v-icon class="text-h2 text-sm-h3 text-md-h4" aria-hidden="false" :icon=link.icon />
+                <v-icon class="text-h5 text-md-h4" aria-hidden="false" :icon=link.icon />
             </a>
         </p>
     </v-footer>
 </template>
 
-<style scoped>
-footer {
-    /* display: ; */
-    width: 100%;
-    align-content: space-between;
-}
-
-footer img {
-    height: 50px;
-}
-
-footer p {
-    margin: 0 3vw;
-}
-</style>
+<style scoped></style>
