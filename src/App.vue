@@ -8,7 +8,6 @@ const theme = ref(false)
 
 function changeTheme() {
   theme.value = !theme.value
-  console.log("sócio da celesc?")
 }
 
 </script>
@@ -17,7 +16,6 @@ function changeTheme() {
   <v-app :theme="theme ? 'dark' : 'light'">
     <Header @change-Theme="changeTheme" :theme="theme" />
     <v-main>
-      <h1>tema: {{ theme ? 'dark' : 'light' }}</h1>
       <router-view />
     </v-main>
     <Footer />
