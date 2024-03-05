@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <h1>PAGE-PRIMARIO</h1>
+    <h1 class="py-3">Hello there, adventurer!</h1>
 </template>
 
 <style scoped></style>
