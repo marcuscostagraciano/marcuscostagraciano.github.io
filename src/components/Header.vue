@@ -18,13 +18,8 @@ const props = defineProps(['theme'])
       <v-btn @click="$emit('change-Theme')" :icon="theme ? 'mdi-white-balance-sunny' : 'mdi-weather-night'"
         :color="theme ? 'yellow' : 'black'"></v-btn>
 
-      <span v-for="route in routes">
-        <v-btn class="px-2 py-0"><router-link :to="route.path">{{ route.name }}</router-link></v-btn>
-      </span>
-      <!-- <v-btn class="px-2 py-0"><router-link to="/">Home</router-link></v-btn>
-      <v-btn class="px-2 py-0"><router-link to="/about-me">About Me</router-link></v-btn>
-      <v-btn class="px-2 py-0"><router-link to="/projects">Projects</router-link></v-btn>
-      <v-btn class="px-2 py-0"><router-link to="/contact-me">Contact Me</router-link></v-btn> -->
+      <v-btn v-for="route in routes" class="px-2 py-0"><router-link :to="route.path">{{ route.name
+          }}</router-link></v-btn>
     </v-col>
   </v-app-bar>
 </template>
