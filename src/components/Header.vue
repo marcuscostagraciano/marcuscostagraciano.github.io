@@ -2,7 +2,8 @@
 import { routes } from '../router.js'
 console.log(routes)
 
-const props = defineProps(['theme'])
+defineProps({ theme: Boolean })
+
 
 </script>
 
