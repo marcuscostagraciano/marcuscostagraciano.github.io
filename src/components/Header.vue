@@ -128,7 +128,6 @@ onBeforeMount(() => {
   }
 }
 
-
 a {
   text-decoration: none;
 }
