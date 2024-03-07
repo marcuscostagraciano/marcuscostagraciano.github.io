@@ -124,7 +124,6 @@ onBeforeMount(() => {
 
   @media screen and (width: 320px) {
     max-width: 50%;
-    background-color: gray;
   }
 }
 
