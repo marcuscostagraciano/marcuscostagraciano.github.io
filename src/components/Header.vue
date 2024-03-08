@@ -9,7 +9,7 @@ const mobileNav = ref(false)
 
 function checkScreenWidth() {
   windowWidth.value = window.innerWidth
-  if (windowWidth.value <= 768) {
+  if (windowWidth.value < 1024) {
     isMobile.value = true
   }
   else {
@@ -23,10 +23,6 @@ onBeforeMount(() => {
   checkScreenWidth()
 })
 
-// function toggleMobileNav() {
-//   mobileNav.value = !mobileNav.value
-//   console.log(mobileNav.value)
-// }
 
 </script>
 
@@ -96,13 +92,13 @@ onBeforeMount(() => {
 }
 
 #button-col {
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 768px) {
     /* 100 / 12 = 8.3 */
     flex: 0 0 80%;
     max-width: 80%;
   }
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) {
     flex: 0 0 30%;
     max-width: 30%;
   }
