@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeMount, onMounted, ref } from 'vue';
-import { routes } from '../router.js'
+import { routes } from '../router'
 
 defineProps({ theme: Boolean })
 const windowWidth = ref(0)
@@ -126,4 +126,4 @@ onBeforeMount(() => {
 a {
   text-decoration: none;
 }
-</style>
+</style>../router/router.js

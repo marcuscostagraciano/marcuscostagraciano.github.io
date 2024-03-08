@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <h1>Projects page</h1>
+    <h1 class="py-3">Contact Me</h1>
 </template>
 
 <style scoped></style>
