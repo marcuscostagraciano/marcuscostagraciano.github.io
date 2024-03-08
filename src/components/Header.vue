@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeMount, onMounted, ref } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import { routes } from '../router'
 
 defineProps({ theme: Boolean })
@@ -34,7 +34,6 @@ onBeforeMount(() => {
       </v-app-bar-title>
     </v-col>
 
-    <!-- QUEBRA ATÉ 918 -->
     <v-col id="app-navbar">
       <v-col class="text-right" id="button-col">
         <v-btn @click="$emit('change-Theme')" :icon="theme ? 'mdi-white-balance-sunny' : 'mdi-weather-night'"
@@ -93,7 +92,6 @@ onBeforeMount(() => {
 
 #button-col {
   @media screen and (max-width: 768px) {
-    /* 100 / 12 = 8.3 */
     flex: 0 0 80%;
     max-width: 80%;
   }
