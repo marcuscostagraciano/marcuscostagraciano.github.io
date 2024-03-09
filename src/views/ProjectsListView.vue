@@ -3,7 +3,6 @@ import fetchGitHubRepos from '../api/github_repos';
 const gitUsername = 'marcuscostagraciano'
 
 const fetched_repos = await fetchGitHubRepos(gitUsername)
-console.log(fetched_repos)
 
 </script>
 
@@ -12,8 +11,8 @@ console.log(fetched_repos)
 
     <v-container>
         <v-row>
-            <v-col v-for="project in  fetched_repos " cols="auto">
-                <v-card class="mx-auto" max-width="344">
+            <v-col v-for="project in  fetched_repos" cols="auto">
+                <v-card class="card mx-auto">
                     <v-card-item>
                         <v-card-subtitle>{{ project.creation_date }}
                             <span v-if="project.language">- {{ project.language }}</span>
@@ -22,7 +21,7 @@ console.log(fetched_repos)
                             <div class="project-title text-h5 mb-1">
                                 {{ project.name }}
                             </div>
-                            <div class="text-caption">{{ project.description }}</div>
+                            <div class="project-description text-caption">{{ project.description }}</div>
                         </div>
                     </v-card-item>
 
@@ -40,8 +39,46 @@ console.log(fetched_repos)
 </template>
 
 <style scoped>
+.v-row {
+    margin: auto;
+    display: flex;
+    align-content: center !important;
+}
+
+.card:not(:hover) .project-title {
+    opacity: 75%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: auto;
+    word-break: auto-phrase;
+    width: 85vw;
+
+    @media screen and (min-width: 480px) {
+        width: 41.5vw;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 20vw;
+    }
+
+    @media screen and (min-width: 960px) {
+        width: 18vw;
+    }
+
+}
+
 .project-title {
     text-transform: capitalize !important;
+    max-height: 100pxrem;
+}
+
+.project-description {
+    max-height: 5rem;
+    overflow: hidden;
 }
 
 a {
