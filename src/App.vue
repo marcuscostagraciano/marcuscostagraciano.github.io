@@ -15,9 +15,22 @@ function changeTheme() {
 <template>
   <v-app :theme="theme ? 'dark' : 'light'">
     <Header @change-Theme="changeTheme" :theme="theme" />
-    <v-main>
+
+    <Suspense>
+      <v-main>
+        <template #default>
+          <routerView />
+        </template>
+        <template #fallback>
+          <span>Loading...</span>
+        </template>
+      </v-main>
+    </Suspense>
+
+    <!-- <v-main>
       <router-view />
-    </v-main>
+    </v-main> -->
+
     <Footer />
   </v-app>
 </template>

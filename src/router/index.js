@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import home from '../views/HomeView.vue'
 import about_me from '../views/AboutMeView.vue'
 import contact_me from '../views/ContactMeView.vue'
-import projects from '../views/ProjectsView.vue'
+import projects from '../views/ProjectsListView.vue'
 
 export const routes = [
     { path: '/', component: home, name: "Home" },
