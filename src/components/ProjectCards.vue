@@ -21,7 +21,7 @@ defineProps({
                             ---
                         </div>
                         <div v-else>
-                            <v-chip v-for="n in 3" size="small">
+                            <v-chip v-for="n in 3" size="small" density="comfortable">
                                 {{ project.topics[n - 1] }}
                             </v-chip>
                         </div>
