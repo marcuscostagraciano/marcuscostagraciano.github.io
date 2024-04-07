@@ -16,6 +16,16 @@ defineProps({
                     <div class="project-title text-h5 mb-1">
                         {{ project.name }}
                     </div>
+                    <div class="project-topics mb-2">
+                        <div v-if="project.topics.length == 0">
+                            ---
+                        </div>
+                        <div v-else>
+                            <v-chip v-for="n in 3" size="small">
+                                {{ project.topics[n - 1] }}
+                            </v-chip>
+                        </div>
+                    </div>
                     <div class="project-description text-caption">
                         {{ project.description }}
                     </div>
@@ -65,6 +75,22 @@ defineProps({
 .project-title {
     text-transform: capitalize !important;
     font-size: 1.2em !important;
+}
+
+.project-topics {
+    font-size: 0.7rem !important;
+}
+
+.project-topics div {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-topics .v-chip {
+    background-color: rgb(239, 239, 239, .1) !important;
+    word-break: break-all;
+    text-align: center;
+    font-size: 0.7rem !important;
 }
 
 .project-description {
