@@ -44,7 +44,7 @@ defineProps({
     flex-direction: column;
     align-self: center;
     margin: auto;
-    /* word-break: auto-phrase; */
+    word-break: break-word;
     width: 85vw;
     height: 100%;
 
