@@ -83,6 +83,17 @@ onBeforeMount(() => {
   }
 }
 
+#app-bar-title .v-app-bar-title {
+  @media screen and (max-width: 481px) {
+    font-size: .7rem !important;
+  }
+
+  @media screen and (min-width: 481px) {
+    font-size: 1rem !important;
+  }
+
+}
+
 #app-navbar {
   justify-content: right !important;
   justify-items: right !important;
