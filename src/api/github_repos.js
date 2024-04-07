@@ -9,11 +9,13 @@ export default async function fetchGitHubRepos(git_username) {
         const data = await response.json();
 
         const parsedRepos = data.map((repo) => ({
-            name: repo.name,
+            // Less work than renaming all repos lol
+            name: repo.name.replaceAll("_", "-"),
             description: repo.description || "No description available",
             language: repo.language,
             creation_date: new Date(repo.created_at).toLocaleDateString(),
             url: repo.html_url,
+            topics: repo.topics,
         }));
 
         const sortedRepos = parsedRepos.sort((a, b) => {
