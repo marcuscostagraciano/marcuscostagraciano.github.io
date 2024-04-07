@@ -62,11 +62,6 @@ defineProps({
 
 }
 
-.action {
-    background-color: rgb(0, 0, 238, 0.03);
-    margin-top: auto;
-}
-
 .project-title {
     text-transform: capitalize !important;
     font-size: 1.2em !important;
@@ -82,6 +77,11 @@ defineProps({
     overflow-y: auto;
 }
 
+.action {
+    background-color: rgb(0, 0, 238, 0.03);
+    margin-top: auto;
+}
+
 a {
     height: 100%;
     width: 100%;
@@ -89,6 +89,6 @@ a {
 }
 
 button:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 </style>
