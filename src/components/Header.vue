@@ -131,8 +131,4 @@ onBeforeMount(() => {
     max-width: 50%;
   }
 }
-
-a {
-  text-decoration: none;
-}
-</style>../router/router.js
+</style>

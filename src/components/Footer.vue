@@ -11,7 +11,7 @@ const contact_links = [
     <v-footer app class="d-flex justify-space-around">
         <p v-for="link in contact_links">
             <a :href="link.url" target="_blank">
-                <v-icon class="text-h5 text-md-h4" aria-hidden="false" :icon=link.icon />
+                <v-icon aria-hidden="false" :icon=link.icon />
             </a>
         </p>
     </v-footer>
