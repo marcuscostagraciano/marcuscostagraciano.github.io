@@ -15,7 +15,7 @@ export default async function fetchGitHubRepos(git_username) {
             language: repo.language,
             creation_date: new Date(repo.created_at).toLocaleDateString(),
             url: repo.html_url,
-            topics: repo.topics,
+            topics: repo.topics.slice(0, 5),
         }));
 
         const sortedRepos = parsedRepos.sort((a, b) => {
