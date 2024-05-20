@@ -9,25 +9,30 @@ const fetched_repos = await fetchGitHubRepos(gitUsername)
 </script>
 
 <template>
-    <h1 class="py-3">Projects page</h1>
+    <h1 class="pt-3 pb-2">Projects page</h1>
 
     <Suspense>
-        <v-container>
-            <v-row>
-                <ProjectCards :projects="fetched_repos" />
-            </v-row>
+        <v-container class="projects-container">
+            <ProjectCards v-for="project in fetched_repos" :project="project" />
         </v-container>
 
         <template #fallback>
-            Loading
+            Loading projects...
         </template>
     </Suspense>
 </template>
 
 <style scoped>
-.v-row {
-    margin: auto;
-    display: flex;
-    align-content: center !important;
+.projects-container {
+    display: grid;
+    gap: 1.5rem;
+
+    @media (width > 320px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (width >=768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 </style>
