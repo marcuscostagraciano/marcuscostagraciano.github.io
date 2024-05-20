@@ -1,6 +1,7 @@
-export default async function fetchGitHubRepos(git_username) {
+export default async function fetchGitHubRepos() {
     try {
-        const response = await fetch(`https://api.github.com/users/${git_username}/repos`)
+        const GIT_USERNAME = 'marcuscostagraciano'
+        const response = await fetch(`https://api.github.com/users/${GIT_USERNAME}/repos`)
 
         if (!response.ok) {
             throw new Error(`Failed to fetch data. Status: ${response.status}`);
